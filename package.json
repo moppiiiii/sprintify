@@ -19,6 +19,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
     "@nx/cypress": "19.7.2",
