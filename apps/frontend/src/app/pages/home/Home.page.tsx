@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Button } from "@mantine/core";
+import HomeTemplate from "../../components/templates/home/Home.template";
 
 const HomePage: React.FC = () => {
-  return <Button variant="filled">Button</Button>;
+  return <HomeTemplate />;
 };
 
 export default HomePage;
