@@ -15,5 +15,5 @@ jobs:
           node-version: 20
           cache: 'pnpm'
       - run: pnpm i
-      - run: npm run biome:check
-      - run: npm run build
+      - run: pnpm biome:check
+      - run: pnpm build
