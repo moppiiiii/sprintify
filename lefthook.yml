@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: false
+  commands:
+    audit:
+      run: pnpm audit
+    biome:fix:
+      run: pnpm biome:fix && git add {staged_files}
+    stylelint:fix:
+      run: pnpm stylelint:fix && git add {staged_files}

@@ -1,13 +1,22 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from "./app.module.scss";
+import "@mantine/core/styles.css";
 
-import NxWelcome from "./nx-welcome";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { MantineProvider } from "@mantine/core";
+
+import HomePage from "./pages/home/Home.page";
+
+import "./wdyr";
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="frontend" />
-    </div>
+    <MantineProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/*" element={<Navigate to="/" />} />
+        </Routes>
+      </BrowserRouter>
+    </MantineProvider>
   );
 }
 
