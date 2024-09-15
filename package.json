@@ -4,7 +4,17 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run-many --target serve --all --parallel",
-    "build": "nx run-many --target build --all --parallel"
+    "build": "nx run-many --target build --all --parallel",
+    "biome:check": "nx run-many --target biome:check --all --parallel",
+    "biome:fix": "nx run-many --target biome:fix --all --parallel",
+    "backend:biome:check": "biome format ./apps/backend/",
+    "backend-e2e:biome:check": "biome format ./apps/backend-e2e/",
+    "frontend:biome:check": "biome format ./apps/frontend/",
+    "frontend-e2e:biome:check": "biome format ./apps/frontend-e2e/",
+    "backend:biome:fix": "biome format --write ./apps/backend/",
+    "backend-e2e:biome:fix": "biome format --write ./apps/backend-e2e/",
+    "frontend:biome:fix": "biome format --write ./apps/frontend/",
+    "frontend-e2e:biome:fix": "biome format --write ./apps/frontend-e2e/"
   },
   "private": true,
   "dependencies": {
