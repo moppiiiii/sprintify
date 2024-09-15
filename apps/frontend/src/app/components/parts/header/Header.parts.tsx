@@ -48,4 +48,5 @@ const HeaderComponent: React.FC = () => {
   );
 };
 
+HeaderComponent.whyDidYouRender = true;
 export default HeaderComponent;

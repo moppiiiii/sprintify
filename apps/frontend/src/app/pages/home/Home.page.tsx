@@ -6,4 +6,5 @@ const HomePage: React.FC = () => {
   return <HomeTemplate />;
 };
 
+HomePage.whyDidYouRender = true;
 export default HomePage;
