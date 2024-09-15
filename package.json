@@ -7,6 +7,8 @@
     "build": "nx run-many --target build --all --parallel",
     "biome:check": "nx run-many --target biome:check --all --parallel",
     "biome:fix": "nx run-many --target biome:fix --all --parallel",
+    "stylelint:check": "nx run-many --target stylelint:check --all --parallel",
+    "stylelint:fix": "nx run-many --target stylelint:fix --all --parallel",
     "gql:gen": "graphql-codegen --config codegen.yml",
     "backend:biome:check": "biome format ./apps/backend/",
     "backend-e2e:biome:check": "biome format ./apps/backend-e2e/",
@@ -15,7 +17,9 @@
     "backend:biome:fix": "biome format --write ./apps/backend/",
     "backend-e2e:biome:fix": "biome format --write ./apps/backend-e2e/",
     "frontend:biome:fix": "biome format --write ./apps/frontend/",
-    "frontend-e2e:biome:fix": "biome format --write ./apps/frontend-e2e/"
+    "frontend-e2e:biome:fix": "biome format --write ./apps/frontend-e2e/",
+    "frontend:stylelint:check": "stylelint \"apps/frontend/src/**/*.scss\"",
+    "frontend:stylelint:fix": "stylelint --fix \"apps/frontend/src/**/*.scss\""
   },
   "private": true,
   "dependencies": {
@@ -93,6 +97,11 @@
     "prettier": "^2.6.2",
     "sass": "^1.55.0",
     "storybook": "^8.2.8",
+    "stylelint": "^16.9.0",
+    "stylelint-config-recess-order": "^5.1.0",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-scss": "^6.6.0",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "typescript": "~5.5.2",
