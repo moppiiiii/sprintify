@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nx run-many --target serve --all --parallel",
     "build": "nx run-many --target build --all --parallel",
+    "sb:start": "nx run frontend:storybook",
     "biome:check": "nx run-many --target biome:check --all --parallel",
     "biome:fix": "nx run-many --target biome:fix --all --parallel",
     "stylelint:check": "nx run-many --target stylelint:check --all --parallel",
@@ -67,6 +68,7 @@
     "@nx/workspace": "19.7.2",
     "@playwright/test": "^1.36.0",
     "@storybook/addon-essentials": "^8.2.8",
+    "@storybook/addon-styling-webpack": "^1.0.0",
     "@storybook/core-server": "^8.2.8",
     "@storybook/react": "^8.2.8",
     "@storybook/react-vite": "^8.2.8",
@@ -103,6 +105,7 @@
     "prettier": "^2.6.2",
     "sass": "^1.55.0",
     "storybook": "^8.2.8",
+    "storybook-dark-mode": "^4.0.2",
     "stylelint": "^16.9.0",
     "stylelint-config-recess-order": "^5.1.0",
     "stylelint-config-recommended-scss": "^14.1.0",
