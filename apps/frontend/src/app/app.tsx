@@ -5,6 +5,8 @@ import { MantineProvider } from "@mantine/core";
 
 import HomePage from "./pages/home/Home.page";
 
+import "./wdyr";
+
 export function App() {
   return (
     <MantineProvider>
