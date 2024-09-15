@@ -1,19 +1,32 @@
+name: static-analysis
+
 on:
-  workflow_dispatch:
   push:
+  pull_request:
+
+permissions:
+  actions: read
+  contents: read
 
 jobs:
-  static-analysis:
+  main:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 9
+
+      - run: pnpm dlx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
-      - run: pnpm i
-      - run: pnpm biome:check
-      - run: pnpm build
+
+      - run: pnpm install --frozen-lockfile
+      - uses: nrwl/nx-set-shas@v4
+      - run: pnpm exec nx affected biome:check
