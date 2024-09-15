@@ -21,6 +21,22 @@
         "commands": ["pnpm run frontend:biome:fix"],
         "parallel": false
       }
+    },
+    "stylelint:check": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "options": {
+        "commands": ["pnpm run frontend:stylelint:check"],
+        "parallel": false
+      }
+    },
+    "stylelint:fix": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "options": {
+        "commands": ["pnpm run frontend:stylelint:fix"],
+        "parallel": false
+      }
     }
   }
 }
