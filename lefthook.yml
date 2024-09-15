@@ -4,4 +4,4 @@ pre-commit:
     audit:
       run: pnpm audit
     biome:fix:
-      run: pnpm biome:fix {staged_files} && git add {staged_files}
+      run: pnpm biome:fix && git add {staged_files}
