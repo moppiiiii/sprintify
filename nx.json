@@ -1,5 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "neverConnectToCloud": true,
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -17,7 +18,6 @@
       "{workspaceRoot}/.github/workflows/static-analysis.yml"
     ]
   },
-  "nxCloudId": "66e26b5103d67d60dc3bc26b",
   "plugins": [
     {
       "plugin": "@nx/vite/plugin",
