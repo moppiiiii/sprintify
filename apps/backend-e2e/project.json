@@ -12,6 +12,22 @@
         "passWithNoTests": true
       },
       "dependsOn": ["backend:build"]
+    },
+    "biome:check": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "options": {
+        "commands": ["pnpm run backend-e2e:biome:check"],
+        "parallel": false
+      }
+    },
+    "biome:fix": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "options": {
+        "commands": ["pnpm run backend-e2e:biome:fix"],
+        "parallel": false
+      }
     }
   }
 }

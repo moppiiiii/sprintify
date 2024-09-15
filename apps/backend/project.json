@@ -21,6 +21,22 @@
           "buildTarget": "backend:build:production"
         }
       }
+    },
+    "biome:check": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "options": {
+        "commands": ["pnpm run backend:biome:check"],
+        "parallel": false
+      }
+    },
+    "biome:fix": {
+      "executor": "nx:run-commands",
+      "cache": true,
+      "options": {
+        "commands": ["pnpm run backend:biome:fix"],
+        "parallel": false
+      }
     }
   }
 }
