@@ -1,0 +1,36 @@
+.root {
+  padding: 80px;
+}
+
+.inner {
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  opacity: 0.75;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding-top: 220px;
+}
+
+.title {
+  font-family:
+    "Greycliff CF",
+    var(--mantine-font-family);
+  font-size: 38px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.description {
+  max-width: 540px;
+  margin: auto;
+  margin-top: var(--mantine-spacing-xl);
+  margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+}
