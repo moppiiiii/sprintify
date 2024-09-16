@@ -39,13 +39,12 @@
     border-radius: var(--mantine-radius-sm);
 
 
-> .link-icon {
-  width: 25px;
-  height: 25px;
-  margin-right: var(--mantine-spacing-sm);
-  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
-}
-
+    > .link-icon {
+      width: 25px;
+      height: 25px;
+      margin-right: var(--mantine-spacing-sm);
+      color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
+    }
 
     &:hover {
       color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
