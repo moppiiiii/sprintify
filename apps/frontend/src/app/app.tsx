@@ -1,21 +1,14 @@
 import "@mantine/core/styles.css";
 
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { MantineProvider } from "@mantine/core";
 
-import HomePage from "./pages/home/Home.page";
-
 import "./wdyr";
+import Router from "./router";
 
 export function App() {
   return (
     <MantineProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
-      </BrowserRouter>
+      <Router />
     </MantineProvider>
   );
 }
