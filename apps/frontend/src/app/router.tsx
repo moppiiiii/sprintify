@@ -4,6 +4,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import HomePage from "./pages/home/Home.page";
+import NotFoundPage from "./pages/not-found/NotFound.page";
 
 const router = createBrowserRouter([
   {
@@ -11,8 +12,12 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
+    path: "/404",
+    element: <NotFoundPage />,
+  },
+  {
     path: "/*",
-    element: <Navigate to="/" />,
+    element: <Navigate to="/404" />,
   },
 ]);
 
