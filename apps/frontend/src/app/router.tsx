@@ -5,11 +5,16 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/home/Home.page";
 import NotFoundPage from "./pages/not-found/NotFound.page";
+import BoardPage from "./pages/board/Board.page";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "/board",
+    element: <BoardPage />,
   },
   {
     path: "/404",
