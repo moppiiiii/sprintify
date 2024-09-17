@@ -12,7 +12,7 @@ import classes from "./Navbar.parts.module.scss";
 
 const data = [
   { link: "", label: "List", icon: IconList },
-  { link: "", label: "Board", icon: IconLayoutKanban },
+  { link: "/board", label: "Board", icon: IconLayoutKanban },
   { link: "", label: "Sprint", icon: IconRun },
   { link: "", label: "Retrospective", icon: IconArrowBackUpDouble },
 ];
