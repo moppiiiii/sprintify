@@ -1,4 +1,4 @@
 declare const classNames: {
-  readonly 'retrospective-template-container': 'retrospective-template-container';
+  readonly "retrospective-template-container": "retrospective-template-container";
 };
 export = classNames;
