@@ -14,7 +14,7 @@ const data = [
   { link: "", label: "List", icon: IconList },
   { link: "/board", label: "Board", icon: IconLayoutKanban },
   { link: "/sprint", label: "Sprint", icon: IconRun },
-  { link: "", label: "Retrospective", icon: IconArrowBackUpDouble },
+  { link: "/retrospective", label: "Retrospective", icon: IconArrowBackUpDouble },
 ];
 
 const NavbarComponent: React.FC = () => {
