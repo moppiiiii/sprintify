@@ -32,7 +32,7 @@ const HeaderComponent: React.FC = () => {
 
   return (
     <header className={classes["header-container"]}>
-      <Container size="xl" className={classes["inner-container"]}>
+      <Container fluid className={classes["inner-container"]}>
         <img
           className={classes["logo-image"]}
           src={SprintifyLogo}
