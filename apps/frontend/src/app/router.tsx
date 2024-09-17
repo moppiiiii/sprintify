@@ -6,6 +6,7 @@ import {
 import HomePage from "./pages/home/Home.page";
 import NotFoundPage from "./pages/not-found/NotFound.page";
 import BoardPage from "./pages/board/Board.page";
+import SprintPage from "./pages/sprint/Sprint.page";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/board",
     element: <BoardPage />,
+  },
+  {
+    path: "/sprint",
+    element: <SprintPage />,
   },
   {
     path: "/404",
