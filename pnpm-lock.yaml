@@ -11,6 +11,7 @@ overrides:
   express@<4.20.0: '>=4.20.0'
   path-to-regexp@>=2.0.0 <3.3.0: '>=3.3.0'
   path-to-regexp@<0.1.10: '>=0.1.10'
+  vite@>=5.4.0 <=5.4.5: '>=5.4.6'
 
 dependencies:
   '@apollo/client':
@@ -81,7 +82,7 @@ dependencies:
     version: 2.7.0
   vite-plugin-sass-dts:
     specifier: ^1.3.26
-    version: 1.3.26(postcss@8.4.47)(prettier@2.8.8)(sass@1.78.0)(vite@5.4.4)
+    version: 1.3.26(postcss@8.4.47)(prettier@2.8.8)(sass@1.78.0)(vite@5.4.6)
 
 devDependencies:
   '@biomejs/biome':
@@ -119,7 +120,7 @@ devDependencies:
     version: 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(eslint@8.57.0)(nx@19.7.2)(ts-node@10.9.1)(typescript@5.5.4)
   '@nx/playwright':
     specifier: 19.7.2
-    version: 19.7.2(@playwright/test@1.47.0)(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(esbuild@0.21.5)(eslint@8.57.0)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.4)(vitest@1.6.0)(webpack-cli@5.1.4)
+    version: 19.7.2(@playwright/test@1.47.0)(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(esbuild@0.21.5)(eslint@8.57.0)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.6)(vitest@1.6.0)(webpack-cli@5.1.4)
   '@nx/react':
     specifier: 19.7.2
     version: 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(eslint@8.57.0)(nx@19.7.2)(typescript@5.5.4)(webpack@5.94.0)
@@ -128,7 +129,7 @@ devDependencies:
     version: 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(eslint@8.57.0)(nx@19.7.2)(typescript@5.5.4)
   '@nx/vite':
     specifier: 19.7.2
-    version: 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.4)(vitest@1.6.0)
+    version: 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.6)(vitest@1.6.0)
   '@nx/web':
     specifier: 19.7.2
     version: 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)
@@ -155,7 +156,7 @@ devDependencies:
     version: 8.3.0(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.5.4)
   '@storybook/react-vite':
     specifier: ^8.2.8
-    version: 8.3.0(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.5.4)(vite@5.4.4)
+    version: 8.3.0(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.5.4)(vite@5.4.6)
   '@swc-node/register':
     specifier: ~1.9.1
     version: 1.9.2(@swc/core@1.5.29)(@swc/types@0.1.12)(typescript@5.5.4)
@@ -191,7 +192,7 @@ devDependencies:
     version: 7.18.0(eslint@8.57.0)(typescript@5.5.4)
   '@vitejs/plugin-react':
     specifier: ^4.2.0
-    version: 4.3.1(vite@5.4.4)
+    version: 4.3.1(vite@5.4.6)
   '@vitest/ui':
     specifier: ^1.3.1
     version: 1.6.0(vitest@1.6.0)
@@ -286,8 +287,8 @@ devDependencies:
     specifier: ~5.5.2
     version: 5.5.4
   vite:
-    specifier: ^5.0.0
-    version: 5.4.4(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
+    specifier: '>=5.4.6'
+    version: 5.4.6(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
   vitest:
     specifier: ^1.3.1
     version: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(jsdom@22.1.0)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
@@ -3511,11 +3512,11 @@ packages:
       chalk: 4.1.2
     dev: true
 
-  /@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.5.4)(vite@5.4.4):
+  /@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.5.4)(vite@5.4.6):
     resolution: {integrity: sha512-pdoMZ9QaPnVlSM+SdU/wgg0nyD/8wQ7y90ttO2CMCyrrm7RxveYIJ5eNfjPaoMFqW41LZra7QO9j+xV4Y18Glw==}
     peerDependencies:
       typescript: '>= 4.3.x'
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0
+      vite: '>=5.4.6'
     peerDependenciesMeta:
       typescript:
         optional: true
@@ -3525,7 +3526,7 @@ packages:
       magic-string: 0.27.0
       react-docgen-typescript: 2.2.2(typescript@5.5.4)
       typescript: 5.5.4
-      vite: 5.4.4(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
+      vite: 5.4.6(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
     dev: true
 
   /@jridgewell/gen-mapping@0.3.5:
@@ -4250,10 +4251,10 @@ packages:
       - debug
     dev: true
 
-  /@nrwl/vite@19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.4)(vitest@1.6.0):
+  /@nrwl/vite@19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.6)(vitest@1.6.0):
     resolution: {integrity: sha512-CAAuK2EeRzviPu4s3d0xVUhI/SBUElpUGHBbxTRyz9upx7S16rcSVcGGEs2dvfi0xNuGrAyCgVsUh1wJENIF2g==}
     dependencies:
-      '@nx/vite': 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.4)(vitest@1.6.0)
+      '@nx/vite': 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.6)(vitest@1.6.0)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -4751,7 +4752,7 @@ packages:
     dev: true
     optional: true
 
-  /@nx/playwright@19.7.2(@playwright/test@1.47.0)(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(esbuild@0.21.5)(eslint@8.57.0)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.4)(vitest@1.6.0)(webpack-cli@5.1.4):
+  /@nx/playwright@19.7.2(@playwright/test@1.47.0)(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(esbuild@0.21.5)(eslint@8.57.0)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.6)(vitest@1.6.0)(webpack-cli@5.1.4):
     resolution: {integrity: sha512-2dtitkb2ukoq09bnVSRpGbpbfFcoN80XY8vje2l9X8GjNGTVkOzZjyroziaJWj63p5Q+JMe39HUry5uNdOtT+g==}
     peerDependencies:
       '@playwright/test': ^1.36.0
@@ -4762,7 +4763,7 @@ packages:
       '@nx/devkit': 19.7.2(nx@19.7.2)
       '@nx/eslint': 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(eslint@8.57.0)(nx@19.7.2)
       '@nx/js': 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)
-      '@nx/vite': 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.4)(vitest@1.6.0)
+      '@nx/vite': 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.6)(vitest@1.6.0)
       '@nx/webpack': 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(esbuild@0.21.5)(nx@19.7.2)(typescript@5.5.4)(webpack-cli@5.1.4)
       '@phenomnomnominal/tsquery': 5.0.1(typescript@5.5.4)
       '@playwright/test': 1.47.0
@@ -4865,13 +4866,13 @@ packages:
       - verdaccio
     dev: true
 
-  /@nx/vite@19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.4)(vitest@1.6.0):
+  /@nx/vite@19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.6)(vitest@1.6.0):
     resolution: {integrity: sha512-7pTwmH6tRfeoaQ8AGh0GcAIWgHbJGsUAdV4PvVbxP0iP4UJsdszyX4DgKSKJsXQ/fjyTFsZgNg8WQCT1GqTvTA==}
     peerDependencies:
-      vite: ^5.0.0
+      vite: '>=5.4.6'
       vitest: ^1.3.1 || ^2.0.0
     dependencies:
-      '@nrwl/vite': 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.4)(vitest@1.6.0)
+      '@nrwl/vite': 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)(vite@5.4.6)(vitest@1.6.0)
       '@nx/devkit': 19.7.2(nx@19.7.2)
       '@nx/js': 19.7.2(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.7.2)(typescript@5.5.4)
       '@phenomnomnominal/tsquery': 5.0.1(typescript@5.5.4)
@@ -4879,7 +4880,7 @@ packages:
       enquirer: 2.3.6
       minimatch: 9.0.3
       tsconfig-paths: 4.2.0
-      vite: 5.4.4(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
+      vite: 5.4.6(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
       vitest: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(jsdom@22.1.0)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
     transitivePeerDependencies:
       - '@babel/traverse'
@@ -5420,13 +5421,13 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /@storybook/builder-vite@8.3.0(storybook@8.3.0)(typescript@5.5.4)(vite@5.4.4):
+  /@storybook/builder-vite@8.3.0(storybook@8.3.0)(typescript@5.5.4)(vite@5.4.6):
     resolution: {integrity: sha512-9qo3zcZkEpy69E7cx9OHHexBe9+25vH0p+4sWZSjl2sjqjhaxLN5eXnODQbDsOKZNRVrLVTGmKxfFJzAJFnY0w==}
     peerDependencies:
       '@preact/preset-vite': '*'
       storybook: ^8.3.0
       typescript: '>= 4.3.x'
-      vite: ^4.0.0 || ^5.0.0
+      vite: '>=5.4.6'
       vite-plugin-glimmerx: '*'
     peerDependenciesMeta:
       '@preact/preset-vite':
@@ -5447,7 +5448,7 @@ packages:
       storybook: 8.3.0
       ts-dedent: 2.2.0
       typescript: 5.5.4
-      vite: 5.4.4(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
+      vite: 5.4.6(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
     transitivePeerDependencies:
       - supports-color
       - webpack-sources
@@ -5565,18 +5566,18 @@ packages:
       storybook: 8.3.0
     dev: true
 
-  /@storybook/react-vite@8.3.0(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.5.4)(vite@5.4.4):
+  /@storybook/react-vite@8.3.0(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.5.4)(vite@5.4.6):
     resolution: {integrity: sha512-VcKp/mpO8M+JsyprTGLLvAzwx7PChdWFDBasyQ0MO+YVwci78gPAZnfWNZaaEB2mdDgPPGuoSTwBgzZmP3FsPg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
       storybook: ^8.3.0
-      vite: ^4.0.0 || ^5.0.0
+      vite: '>=5.4.6'
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.4)(vite@5.4.4)
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.4)(vite@5.4.6)
       '@rollup/pluginutils': 5.1.0
-      '@storybook/builder-vite': 8.3.0(storybook@8.3.0)(typescript@5.5.4)(vite@5.4.4)
+      '@storybook/builder-vite': 8.3.0(storybook@8.3.0)(typescript@5.5.4)(vite@5.4.6)
       '@storybook/react': 8.3.0(react-dom@18.3.1)(react@18.3.1)(storybook@8.3.0)(typescript@5.5.4)
       find-up: 5.0.0
       magic-string: 0.30.11
@@ -5586,7 +5587,7 @@ packages:
       resolve: 1.22.8
       storybook: 8.3.0
       tsconfig-paths: 4.2.0
-      vite: 5.4.4(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
+      vite: 5.4.6(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
     transitivePeerDependencies:
       - '@preact/preset-vite'
       - '@storybook/test'
@@ -6537,18 +6538,18 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@vitejs/plugin-react@4.3.1(vite@5.4.4):
+  /@vitejs/plugin-react@4.3.1(vite@5.4.6):
     resolution: {integrity: sha512-m/V2syj5CuVnaxcUJOQRel/Wr31FFXRFlnOoq1TVtkCxsY5veGMTEmpWHndrhB2U8ScHtCQB1e+4hWYExQc6Lg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      vite: ^4.2.0 || ^5.0.0
+      vite: '>=5.4.6'
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.25.2)
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.25.2)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.4(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
+      vite: 5.4.6(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -16097,7 +16098,7 @@ packages:
       debug: 4.3.7
       pathe: 1.1.2
       picocolors: 1.1.0
-      vite: 5.4.4(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
+      vite: 5.4.6(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -16110,24 +16111,24 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-sass-dts@1.3.26(postcss@8.4.47)(prettier@2.8.8)(sass@1.78.0)(vite@5.4.4):
+  /vite-plugin-sass-dts@1.3.26(postcss@8.4.47)(prettier@2.8.8)(sass@1.78.0)(vite@5.4.6):
     resolution: {integrity: sha512-GjMasQRuG/vlH0b48KFR4QHfki1Vgp5y+Q9n9v7WKdUkLS5OB19ZE1bf3O1ElGsdRGn/xwWp7iq2Z/uBrSfHSw==}
     engines: {node: '>=20'}
     peerDependencies:
       postcss: ^8
       prettier: ^2.7 || ^3
       sass: '*'
-      vite: '>=3'
+      vite: '>=5.4.6'
     dependencies:
       postcss: 8.4.47
       postcss-js: 4.0.1(postcss@8.4.47)
       prettier: 2.8.8
       sass: 1.78.0
-      vite: 5.4.4(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
+      vite: 5.4.6(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
     dev: false
 
-  /vite@5.4.4(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0):
-    resolution: {integrity: sha512-RHFCkULitycHVTtelJ6jQLd+KSAAzOgEYorV32R2q++M6COBjKJR6BxqClwp5sf0XaBDjVMuJ9wnNfyAJwjMkA==}
+  /vite@5.4.6(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0):
+    resolution: {integrity: sha512-IeL5f8OO5nylsgzd9tq4qD2QqI0k2CQLGrWD0rCN0EQJZpBK5vJAx0I+GDkMOXxQX/OfFHMuLIx6ddAxGX/k+Q==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -16212,7 +16213,7 @@ packages:
       strip-literal: 2.1.0
       tinybench: 2.9.0
       tinypool: 0.8.4
-      vite: 5.4.4(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
+      vite: 5.4.6(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
       vite-node: 1.6.0(@types/node@18.16.9)(less@4.1.3)(sass@1.78.0)(stylus@0.59.0)
       why-is-node-running: 2.3.0
     transitivePeerDependencies:
