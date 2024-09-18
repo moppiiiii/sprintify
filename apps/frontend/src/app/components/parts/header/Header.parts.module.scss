@@ -9,29 +9,11 @@
     justify-content: space-between;
     height: 56px;
 
-    > .logo-image {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-    }
-
-    .header-link {
-      display: block;
-      padding: 8px 12px;
-      font-size: var(--mantine-font-size-sm);
-      font-weight: 500;
-      line-height: 1;
-      color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
-      text-decoration: none;
-      border-radius: var(--mantine-radius-sm);
-
-      &:hover {
-        background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-      }
-
-      [data-mantine-color-scheme] &[data-active] {
-        color: var(--mantine-color-white);
-        background-color: var(--mantine-color-blue-filled);
+    > .info-group {
+      > .logo-image {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
       }
     }
   }
