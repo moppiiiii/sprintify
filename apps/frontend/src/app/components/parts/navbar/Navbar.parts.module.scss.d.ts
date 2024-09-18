@@ -4,7 +4,7 @@ declare const classNames: {
   readonly "navbar-header": "navbar-header";
   readonly "logo-image": "logo-image";
   readonly "navbar-footer-wrapper": "navbar-footer-wrapper";
-  readonly link: "link";
+  readonly "navbar-link": "navbar-link";
   readonly "link-icon": "link-icon";
 };
 export = classNames;
