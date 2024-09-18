@@ -1,0 +1,10 @@
+.usually-layout-container {
+  > .layout-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    > .navbar-col {
+      padding-right: 0;
+    }
+  }
+}
