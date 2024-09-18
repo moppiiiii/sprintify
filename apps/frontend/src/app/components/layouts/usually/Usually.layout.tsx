@@ -4,17 +4,18 @@ import NavbarComponent from "../../parts/navbar/Navbar.parts";
 import { UsuallyLayoutProps } from "./type";
 
 import classes from "./Usually.layout.module.scss";
+import { Box } from "@mantine/core";
 
 const UsuallyLayout: React.FC<UsuallyLayoutProps> = ({ children }) => {
   return (
     <main className={classes["usually-layout-container"]}>
       <HeaderComponent />
-      <div className={classes["layout-grid"]}>
-        <div className={classes["navbar-col"]}>
+      <Box className={classes["layout-grid"]}>
+        <Box className={classes["navbar-col"]}>
           <NavbarComponent />
-        </div>
-        <div>{children}</div>
-      </div>
+        </Box>
+        <Box>{children}</Box>
+      </Box>
     </main>
   );
 };

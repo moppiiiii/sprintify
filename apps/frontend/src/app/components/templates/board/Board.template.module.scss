@@ -1,3 +1,29 @@
-.board-template-container {
+.item {
   display: flex;
+  align-items: center;
+  padding: var(--mantine-spacing-sm) var(--mantine-spacing-xl);
+  margin-bottom: var(--mantine-spacing-sm);
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-5));
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  border-radius: var(--mantine-radius-md);
+}
+
+.itemDragging {
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.symbol {
+  width: 60px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.dragHandle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-right: var(--mantine-spacing-md);
+  padding-left: var(--mantine-spacing-md);
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-1));
 }

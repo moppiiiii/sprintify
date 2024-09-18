@@ -1,4 +1,7 @@
 declare const classNames: {
-  readonly "board-template-container": "board-template-container";
+  readonly item: "item";
+  readonly itemDragging: "itemDragging";
+  readonly symbol: "symbol";
+  readonly dragHandle: "dragHandle";
 };
 export = classNames;

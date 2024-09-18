@@ -30,6 +30,7 @@
     "@graphql-codegen/typescript": "^4.0.9",
     "@graphql-codegen/typescript-operations": "^4.2.3",
     "@graphql-codegen/typescript-react-apollo": "^4.3.2",
+    "@hello-pangea/dnd": "^17.0.0",
     "@mantine/core": "^7.12.2",
     "@mantine/hooks": "^7.12.2",
     "@nestjs/apollo": "^12.2.0",
