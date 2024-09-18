@@ -1,13 +1,12 @@
 import React from "react";
 
 import { Container, Title, Text, Button, Group } from "@mantine/core";
-import HeaderComponent from "../../parts/header/Header.parts";
 import classes from "./NotFound.template.module.scss";
+import SimpleLayout from "../../layouts/simple/Simple.layout";
 
 const NotFoundTemplate: React.FC = () => {
   return (
-    <div>
-      <HeaderComponent />
+    <SimpleLayout>
       <Container fluid className={classes.root}>
         <div className={classes.inner}>
           <svg
@@ -38,7 +37,7 @@ const NotFoundTemplate: React.FC = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </SimpleLayout>
   );
 };
 

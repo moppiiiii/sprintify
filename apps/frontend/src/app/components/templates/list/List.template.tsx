@@ -1,14 +1,8 @@
 import React from "react";
-import HeaderComponent from "../../parts/header/Header.parts";
-import NavbarComponent from "../../parts/navbar/Navbar.parts";
+import UsuallyLayout from "../../layouts/usually/Usually.layout";
 
 const ListTemplate: React.FC = () => {
-  return (
-    <div>
-      <HeaderComponent />
-      <NavbarComponent />
-    </div>
-  );
+  return <UsuallyLayout>aaa</UsuallyLayout>;
 };
 
 ListTemplate.whyDidYouRender = true;
