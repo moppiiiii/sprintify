@@ -11,7 +11,7 @@ import {
 import classes from "./Navbar.parts.module.scss";
 
 const data = [
-  { link: "", label: "List", icon: IconList },
+  { link: "/list", label: "List", icon: IconList },
   { link: "/board", label: "Board", icon: IconLayoutKanban },
   { link: "/sprint", label: "Sprint", icon: IconRun },
   {

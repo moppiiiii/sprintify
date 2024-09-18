@@ -8,11 +8,16 @@ import NotFoundPage from "./pages/not-found/NotFound.page";
 import BoardPage from "./pages/board/Board.page";
 import SprintPage from "./pages/sprint/Sprint.page";
 import RetrospectivePage from "./pages/retrospective/Retrospective.page";
+import ListPage from "./pages/list/List.page";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "/list",
+    element: <ListPage />,
   },
   {
     path: "/board",
