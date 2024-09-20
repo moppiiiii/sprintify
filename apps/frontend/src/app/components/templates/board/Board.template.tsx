@@ -1,9 +1,13 @@
 import React from "react";
 import UsuallyLayout from "../../layouts/usually/Usually.layout";
 
-import { Box, Text } from "@mantine/core";
-import { useListState } from "@mantine/hooks";
-import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import { Box, Flex, Text } from "@mantine/core";
+import {
+  DragDropContext,
+  Droppable,
+  Draggable,
+  DropResult,
+} from "@hello-pangea/dnd";
 import classes from "./Board.template.module.scss";
 import { IconGripVertical } from "@tabler/icons-react";
 
@@ -16,46 +20,82 @@ const data = [
 ];
 
 const BoardTemplate: React.FC = () => {
-  const [state, handlers] = useListState(data);
+  const [columns, setColumns] = React.useState({
+    column1: data,
+    column2: [],
+    column3: [],
+  });
 
-  const items = state.map((item, index) => (
-    <Draggable key={item.symbol} index={index} draggableId={item.symbol}>
-      {(provided, snapshot) => (
-        <Box
-          className={`${classes.item} ${snapshot.isDragging ? classes.itemDragging : ""}`}
-          ref={provided.innerRef}
-          {...provided.draggableProps}
-        >
-          <Box {...provided.dragHandleProps} className={classes.dragHandle}>
-            <IconGripVertical style={{ width: 18, height: 18 }} stroke={1.5} />
-          </Box>
-          <Text className={classes.symbol}>{item.symbol}</Text>
-          <Box>
-            <Text>{item.name}</Text>
-            <Text c="dimmed" size="sm">
-              Position: {item.position} • Mass: {item.mass}
-            </Text>
-          </Box>
-        </Box>
-      )}
-    </Draggable>
-  ));
+  const onDragEnd = (result: DropResult) => {
+    const { source, destination } = result;
+    if (!destination) return;
+
+    const sourceColumn = columns[source.droppableId as keyof typeof columns];
+    const destColumn = columns[destination.droppableId as keyof typeof columns];
+    const [removed] = sourceColumn.splice(source.index, 1);
+    destColumn.splice(destination.index, 0, removed);
+
+    setColumns({
+      ...columns,
+      [source.droppableId]: sourceColumn,
+      [destination.droppableId]: destColumn,
+    });
+  };
 
   return (
     <UsuallyLayout>
-      <DragDropContext
-        onDragEnd={({ destination, source }) =>
-          handlers.reorder({ from: source.index, to: destination?.index || 0 })
-        }
-      >
-        <Droppable droppableId="dnd-list" direction="vertical">
-          {(provided) => (
-            <Box {...provided.droppableProps} ref={provided.innerRef}>
-              {items}
-              {provided.placeholder}
+      <DragDropContext onDragEnd={onDragEnd}>
+        <Flex gap="md" className={classes["board-template-container"]}>
+          {Object.entries(columns).map(([columnId, columnItems]) => (
+            <Box key={columnId} className={classes["column-container"]}>
+              <Droppable droppableId={columnId} direction="vertical">
+                {(provided) => (
+                  <Box
+                    {...provided.droppableProps}
+                    ref={provided.innerRef}
+                    className={classes["column-wrapper"]}
+                  >
+                    {columnItems.map((item, index) => (
+                      <Draggable
+                        key={item.symbol}
+                        draggableId={item.symbol}
+                        index={index}
+                      >
+                        {(provided, snapshot) => (
+                          <Box
+                            className={`${classes.item} ${snapshot.isDragging ? classes.itemDragging : ""}`}
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                          >
+                            <Box
+                              {...provided.dragHandleProps}
+                              className={classes.dragHandle}
+                            >
+                              <IconGripVertical
+                                style={{ width: 18, height: 18 }}
+                                stroke={1.5}
+                              />
+                            </Box>
+                            <Text className={classes.symbol}>
+                              {item.symbol}
+                            </Text>
+                            <Box>
+                              <Text>{item.name}</Text>
+                              <Text c="dimmed" size="sm">
+                                Position: {item.position} • Mass: {item.mass}
+                              </Text>
+                            </Box>
+                          </Box>
+                        )}
+                      </Draggable>
+                    ))}
+                    {provided.placeholder}
+                  </Box>
+                )}
+              </Droppable>
             </Box>
-          )}
-        </Droppable>
+          ))}
+        </Flex>
       </DragDropContext>
     </UsuallyLayout>
   );
