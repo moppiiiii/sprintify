@@ -1,3 +1,19 @@
+.board-template-container {
+  padding: 12px;
+
+  > .column-container {
+    flex: 1 1 0;
+    min-width: 0;
+
+    .column-wrapper {
+      min-height: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+}
+
 .item {
   display: flex;
   align-items: center;
