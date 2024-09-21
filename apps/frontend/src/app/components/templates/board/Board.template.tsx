@@ -1,7 +1,7 @@
 import React from "react";
 import UsuallyLayout from "../../layouts/usually/Usually.layout";
 
-import { Box, Flex, Text } from "@mantine/core";
+import { Box, Flex, Paper, Text } from "@mantine/core";
 import {
   DragDropContext,
   Droppable,
@@ -12,18 +12,24 @@ import classes from "./Board.template.module.scss";
 import { IconGripVertical } from "@tabler/icons-react";
 
 const data = [
-  { position: 6, mass: 12.011, symbol: "C", name: "Carbon" },
-  { position: 7, mass: 14.007, symbol: "N", name: "Nitrogen" },
-  { position: 39, mass: 88.906, symbol: "Y", name: "Yttrium" },
-  { position: 56, mass: 137.33, symbol: "Ba", name: "Barium" },
-  { position: 58, mass: 140.12, symbol: "Ce", name: "Cerium" },
+  { position: 1, mass: 1.008, symbol: "H", name: "Hydrogen" },
+  { position: 8, mass: 15.999, symbol: "O", name: "Oxygen" },
+  { position: 11, mass: 22.99, symbol: "Na", name: "Sodium" },
+  { position: 19, mass: 39.098, symbol: "K", name: "Potassium" },
+  { position: 26, mass: 55.845, symbol: "Fe", name: "Iron" },
+  { position: 29, mass: 63.546, symbol: "Cu", name: "Copper" },
+  { position: 47, mass: 107.868, symbol: "Ag", name: "Silver" },
+  { position: 79, mass: 196.967, symbol: "Au", name: "Gold" },
+  { position: 82, mass: 207.2, symbol: "Pb", name: "Lead" },
+  { position: 92, mass: 238.029, symbol: "U", name: "Uranium" },
 ];
 
 const BoardTemplate: React.FC = () => {
   const [columns, setColumns] = React.useState({
-    column1: data,
-    column2: [],
-    column3: [],
+    todo: data,
+    inProgress: [],
+    inReview: [],
+    completed: [],
   });
 
   const onDragEnd = (result: DropResult) => {
@@ -47,7 +53,15 @@ const BoardTemplate: React.FC = () => {
       <DragDropContext onDragEnd={onDragEnd}>
         <Flex gap="md" className={classes["board-template-container"]}>
           {Object.entries(columns).map(([columnId, columnItems]) => (
-            <Box key={columnId} className={classes["column-container"]}>
+            <Paper
+              key={columnId}
+              shadow="md"
+              className={classes["column-container"]}
+            >
+              <Text ta="center" className={classes["column-title"]}>
+                {columnId}
+              </Text>
+
               <Droppable droppableId={columnId} direction="vertical">
                 {(provided) => (
                   <Box
@@ -63,20 +77,20 @@ const BoardTemplate: React.FC = () => {
                       >
                         {(provided, snapshot) => (
                           <Box
-                            className={`${classes.item} ${snapshot.isDragging ? classes.itemDragging : ""}`}
+                            className={`${classes["drag-item"]} ${snapshot.isDragging ? classes["item-dragging"] : ""}`}
                             ref={provided.innerRef}
                             {...provided.draggableProps}
                           >
                             <Box
                               {...provided.dragHandleProps}
-                              className={classes.dragHandle}
+                              className={classes["drag-handle"]}
                             >
                               <IconGripVertical
                                 style={{ width: 18, height: 18 }}
                                 stroke={1.5}
                               />
                             </Box>
-                            <Text className={classes.symbol}>
+                            <Text className={classes["drag-symbol"]}>
                               {item.symbol}
                             </Text>
                             <Box>
@@ -93,7 +107,7 @@ const BoardTemplate: React.FC = () => {
                   </Box>
                 )}
               </Droppable>
-            </Box>
+            </Paper>
           ))}
         </Flex>
       </DragDropContext>

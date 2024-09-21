@@ -1,45 +1,88 @@
 .board-template-container {
+  height: calc(100vh - 56px);
   padding: 12px;
+  background-color: #f8f9fa;
 
   > .column-container {
     flex: 1 1 0;
     min-width: 0;
+    overflow-y: auto;
+
+    > .column-title {
+      position: sticky;
+      top: 0;
+      padding-block: 4px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: capitalize;
+      border-radius: var(--mantine-radius-default) var(--mantine-radius-default) 0 0;
+    }
+
+    &:nth-child(1) {
+       > .column-title {
+        background-color: #2084cb;
+       }
+    }
+
+    &:nth-child(2) {
+      > .column-title {
+        background-color: #eccc28;
+      }
+    }
+
+    &:nth-child(3) {
+      > .column-title {
+        background-color: #e08f25;
+      }
+    }
+
+    &:nth-child(4) {
+      > .column-title {
+        background-color: #29b643;
+      }
+    }
 
     .column-wrapper {
-      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      height: 100%;
       padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+
+      .drag-item {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-5));
+        border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+        border-radius: var(--mantine-radius-md);
+
+        > .drag-handle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          padding-inline: 8px;
+          color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-1));
+        }
+
+        > .drag-symbol {
+          width: 60px;
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+
+      .item-dragging {
+        box-shadow: var(--mantine-shadow-sm);
+      }
     }
   }
 }
 
-.item {
-  display: flex;
-  align-items: center;
-  padding: var(--mantine-spacing-sm) var(--mantine-spacing-xl);
-  margin-bottom: var(--mantine-spacing-sm);
-  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-5));
-  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
-  border-radius: var(--mantine-radius-md);
-}
 
-.itemDragging {
-  box-shadow: var(--mantine-shadow-sm);
-}
 
-.symbol {
-  width: 60px;
-  font-size: 30px;
-  font-weight: 700;
-}
 
-.dragHandle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding-right: var(--mantine-spacing-md);
-  padding-left: var(--mantine-spacing-md);
-  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-1));
-}
+
+
+
