@@ -1,4 +1,6 @@
 .navbar-container {
+  position: sticky;
+  top: 56px;
   display: flex;
   flex-direction: column;
   width: 300px;
