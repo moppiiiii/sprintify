@@ -32,7 +32,17 @@ export type Scalars = {
 
 export type Query = {
   __typename?: "Query";
+  ticketList: Array<TicketList>;
   users: Array<User>;
+};
+
+export type TicketList = {
+  __typename?: "TicketList";
+  avatar: Scalars["String"]["output"];
+  deadline: Scalars["String"]["output"];
+  id: Scalars["ID"]["output"];
+  status: Scalars["String"]["output"];
+  title: Scalars["String"]["output"];
 };
 
 export type User = {
@@ -40,6 +50,20 @@ export type User = {
   email: Scalars["String"]["output"];
   id: Scalars["ID"]["output"];
   name: Scalars["String"]["output"];
+};
+
+export type GetTicketListQueryVariables = Exact<{ [key: string]: never }>;
+
+export type GetTicketListQuery = {
+  __typename?: "Query";
+  ticketList: Array<{
+    __typename?: "TicketList";
+    id: string;
+    title: string;
+    avatar: string;
+    status: string;
+    deadline: string;
+  }>;
 };
 
 export type GetUsersQueryVariables = Exact<{ [key: string]: never }>;
@@ -54,6 +78,87 @@ export type GetUsersQuery = {
   }>;
 };
 
+export const GetTicketListDocument = gql`
+    query GetTicketList {
+  ticketList {
+    id
+    title
+    avatar
+    status
+    deadline
+  }
+}
+    `;
+
+/**
+ * __useGetTicketListQuery__
+ *
+ * To run a query within a React component, call `useGetTicketListQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetTicketListQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetTicketListQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetTicketListQuery(
+  baseOptions?: Apollo.QueryHookOptions<
+    GetTicketListQuery,
+    GetTicketListQueryVariables
+  >,
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<GetTicketListQuery, GetTicketListQueryVariables>(
+    GetTicketListDocument,
+    options,
+  );
+}
+export function useGetTicketListLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<
+    GetTicketListQuery,
+    GetTicketListQueryVariables
+  >,
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useLazyQuery<GetTicketListQuery, GetTicketListQueryVariables>(
+    GetTicketListDocument,
+    options,
+  );
+}
+export function useGetTicketListSuspenseQuery(
+  baseOptions?:
+    | Apollo.SkipToken
+    | Apollo.SuspenseQueryHookOptions<
+        GetTicketListQuery,
+        GetTicketListQueryVariables
+      >,
+) {
+  const options =
+    baseOptions === Apollo.skipToken
+      ? baseOptions
+      : { ...defaultOptions, ...baseOptions };
+  return Apollo.useSuspenseQuery<
+    GetTicketListQuery,
+    GetTicketListQueryVariables
+  >(GetTicketListDocument, options);
+}
+export type GetTicketListQueryHookResult = ReturnType<
+  typeof useGetTicketListQuery
+>;
+export type GetTicketListLazyQueryHookResult = ReturnType<
+  typeof useGetTicketListLazyQuery
+>;
+export type GetTicketListSuspenseQueryHookResult = ReturnType<
+  typeof useGetTicketListSuspenseQuery
+>;
+export type GetTicketListQueryResult = Apollo.QueryResult<
+  GetTicketListQuery,
+  GetTicketListQueryVariables
+>;
 export const GetUsersDocument = gql`
     query GetUsers {
   users {
