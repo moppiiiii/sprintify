@@ -11,7 +11,7 @@ import {
 import App from "./app/app";
 
 const httpLink = new HttpLink({
-  uri: "/graphql",
+  uri: "http://localhost:3000/graphql",
 });
 
 const client = new ApolloClient({

@@ -1,5 +1,12 @@
 .list-template-container {
   height: calc(100vh - 56px);
+  padding: 12px;
   overflow-y: auto;
-  border-radius: 8px;
+  background-color: #f8f9fa;
+
+  .table-wrapper {
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
 }
