@@ -1,6 +1,6 @@
 import { TicketList } from "../../../models/ticket/ticket.model";
 
-export const TICKET_LIST_MOCK_DATA: TicketList[] = [
+export const TICKET_MOCK_DATA: TicketList[] = [
   {
     id: "1",
     title: "Implement login feature",
