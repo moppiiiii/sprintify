@@ -17,3 +17,21 @@ export class TicketList {
   @Field()
   deadline: string;
 }
+
+@ObjectType()
+export class TicketBoard {
+  @Field(() => ID)
+  id: string;
+
+  @Field()
+  title: string;
+
+  @Field()
+  avatar: string;
+
+  @Field()
+  status: string;
+
+  @Field()
+  deadline: string;
+}
